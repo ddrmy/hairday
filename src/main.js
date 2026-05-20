@@ -1,6 +1,6 @@
 "use strict";
 
-import "./libs/dayjs";
+import "./libs/dayjs.js";
 
 //CSS
 
@@ -11,4 +11,5 @@ import "./styles/schedule.css";
 import dayjs from "dayjs";
 
 // JS
-import "./modules/form/submit";
+import "./modules/form/submit.js";
+import "./modules/page-load.js"
