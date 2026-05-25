@@ -41,9 +41,8 @@ form.onsubmit = async (e) => {
         // Recupera somente a hora
         const [hour] = hourSelected.innerText.split(":")
         
-        
         // Insere a hora na data
-        const when = dayjs(selectedDate.value).add(hour)
+        const when = dayjs(selectedDate.value).add(hour, "hour")
         console.log(when)
         
         // Gera um ID

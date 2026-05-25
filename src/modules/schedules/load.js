@@ -1,15 +1,24 @@
+import dayjs from "dayjs"
+import { scheduleFetchByDay } from "../../services/schedule-fetch-by-day.js"
 import { hoursLoad } from "../form/hours-load.js"
+import { schedulesShow } from "../schedules/show.js"
 
 
 
 const selectedDate = document.getElementById("date")
 
-export function schedulesDay(){
+export async function schedulesDay(){
 // Obtem a data do input
 const date = selectedDate.value
 
+// Busca na AI os agendamentos
+const dailySchedules = await scheduleFetchByDay({
+date
+})
+
+// Exibe os agendamentos
+schedulesShow({ dailySchedules })
 
     // Renderiza as horas disponíveis
 hoursLoad({ date })
-
 }
