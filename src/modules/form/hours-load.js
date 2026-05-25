@@ -5,6 +5,8 @@ import { hoursClick } from "./hours-click"
 const hours = document.getElementById("hours")
 
 export function hoursLoad({ date }){
+    // Limpa os horários anteriores.
+    hours.innerHTML = ""
 
     const opening = openingHours.map((hour) => {
         // Recupera somente a hora.
@@ -44,6 +46,7 @@ export function hoursLoad({ date }){
 
         hours.appendChild(li)
     })
+
     hoursClick()
 }
 
