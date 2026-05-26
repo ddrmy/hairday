@@ -48,11 +48,14 @@ form.onsubmit = async (e) => {
         // Gera um ID
         const id = new Date().getTime()
         
+        // Faz o agendamento
         await scheduleNew({
             id,
             name,
             when
         })
+
+        // Recarrega os agendamentos.
     } catch (error) {
         alert("Não foi possível realizer o agendamento.")
         console.log(error)

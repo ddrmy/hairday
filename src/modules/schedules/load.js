@@ -8,10 +8,11 @@ import { schedulesShow } from "../schedules/show.js"
 const selectedDate = document.getElementById("date")
 
 export async function schedulesDay(){
-// Obtem a data do input
+
+    // Obtem a data do input
 const date = selectedDate.value
 
-// Busca na AI os agendamentos
+// Busca na API os agendamentos
 const dailySchedules = await scheduleFetchByDay({
 date
 })
@@ -20,5 +21,7 @@ date
 schedulesShow({ dailySchedules })
 
     // Renderiza as horas disponíveis
-hoursLoad({ date })
+hoursLoad({ date, dailySchedules })
+
+
 }
