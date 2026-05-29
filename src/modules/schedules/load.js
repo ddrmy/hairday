@@ -20,7 +20,7 @@ date
 // Exibe os agendamentos
 schedulesShow({ dailySchedules })
 
-    // Renderiza as horas disponíveis
+// Renderiza as horas disponíveis
 hoursLoad({ date, dailySchedules })
 
 
